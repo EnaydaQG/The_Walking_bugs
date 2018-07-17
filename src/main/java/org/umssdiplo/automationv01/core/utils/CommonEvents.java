@@ -128,4 +128,28 @@ public class CommonEvents {
         selector.selectByVisibleText(option);
     }
 
+    /**
+     * This returns the text inside of an element.
+     *
+     * @param webElement is the WebElement.
+     * @param option is the option to select.
+     *
+     * @return text.
+     */
+    public static String getFromElement(WebElement webElement, String option) {
+        return webElement.getAttribute(option);
+    }
+
+    /**
+     * This returns the text inside of an elementin a select tag.
+     *
+     * @param webElement is the WebElement.
+     *
+     * @return text.
+     */
+    public static String getSelectedOption(WebElement webElement) {
+        Select select = new Select(webElement);
+        WebElement option = select.getFirstSelectedOption();
+        return option.getText();
+    }
 }
