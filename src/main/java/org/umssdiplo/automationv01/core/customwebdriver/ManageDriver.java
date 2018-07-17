@@ -16,7 +16,7 @@ public class ManageDriver {
     private WebDriverWait webDriverWait;
 
     private ManageDriver() {
-        BrowserType driverType = BrowserType.valueOf(PropertyAccessor.getInstance().getBrowser());
+        BrowserType driverType = BrowserType.valueOf("FIREFOX");
         webDriver = DriverFactory.getManageDriver(driverType);
         webDriver.manage().window().maximize();
     }
@@ -34,6 +34,10 @@ public class ManageDriver {
 
     public WebDriver getWebDriver() {
         return webDriver;
+    }
+
+    public void setWebDriverWait(WebDriverWait webDriverWait) {
+        this.webDriverWait = webDriverWait;
     }
 
     public WebDriverWait getWebDriverWait() {

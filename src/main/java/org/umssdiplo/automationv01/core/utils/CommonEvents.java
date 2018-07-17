@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.umssdiplo.automationv01.core.customwebdriver.ManageDriver;
 
 import java.util.List;
@@ -116,4 +117,39 @@ public class CommonEvents {
         webElement.sendKeys(Keys.ENTER);
     }
 
+    /**
+     * This method selects an option of a dropdown.
+     *
+     * @param webElement is the WebElement.
+     * @param option is the option to select.
+     */
+    public static void selectDropdownOption(WebElement webElement, String option) {
+        Select selector = new Select(webElement);
+        selector.selectByVisibleText(option);
+    }
+
+    /**
+     * This returns the text inside of an element.
+     *
+     * @param webElement is the WebElement.
+     * @param option is the option to select.
+     *
+     * @return text.
+     */
+    public static String getFromElement(WebElement webElement, String option) {
+        return webElement.getAttribute(option);
+    }
+
+    /**
+     * This returns the text inside of an elementin a select tag.
+     *
+     * @param webElement is the WebElement.
+     *
+     * @return text.
+     */
+    public static String getSelectedOption(WebElement webElement) {
+        Select select = new Select(webElement);
+        WebElement option = select.getFirstSelectedOption();
+        return option.getText();
+    }
 }
