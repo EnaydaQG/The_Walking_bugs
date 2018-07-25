@@ -40,12 +40,14 @@ public class EmployeeList {
     @Then("^Selecciono Registrar Empleado$")
     public void seleccionoRegistrarEmpleado(){
         WebElement createEmployee = ((FirefoxDriver) driver).findElementById("registrar-empleado");
+        manageDriver.getWebDriverWait().until(ExpectedConditions.visibilityOf(createEmployee));
         createEmployee.click();
     }
 
     @Then("^Hago click en Crear Empleado$")
     public void hagoClickEnCrearEmpleado() {
         WebElement create = ((FirefoxDriver) driver).findElementById("btn-create");
+        manageDriver.getWebDriverWait().until(ExpectedConditions.visibilityOf(create));
         create.click();
     }
 
@@ -54,6 +56,7 @@ public class EmployeeList {
         WebDriverWait wait = new WebDriverWait(driver, 60);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.id("registrar-empleado")));
+        manageDriver.getWebDriverWait().until(ExpectedConditions.visibilityOf(element));
         CommonEvents.jsClickElement(driver.findElement(By.xpath("//*[@id=\"employee-list\"]/tbody/tr[last()]")));
 
         WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
