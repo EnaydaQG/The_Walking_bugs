@@ -7,4 +7,4 @@ Feature: Editar un equipo asignado a un empleado
     And Selecciono equipo para editar "Compresora"
     And Hago click en botón Guardar de edición de equipo
     And Verifico que el primer equipo sea  "Compresora"
-    Then Cierro el navegador
+    #Then Cierro el navegador
