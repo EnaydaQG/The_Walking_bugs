@@ -43,3 +43,4 @@ Feature: Registrar Empleado Accidentado
     When Hago click en el checkbox primero
     And Recargo la pagina
     Then Reviso si esta deseleccionado la primera causa
+    And Cierro el navegador
