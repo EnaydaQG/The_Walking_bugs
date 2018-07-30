@@ -11,4 +11,4 @@ Feature: Registrar empleado para asignación de equipo
     And Verifico que el último registro sea igual a los siguientes campos
       |Empleado |Miranda Clark|
       |Descripcion | Ingreso automatizado de descripcion|
-    Then Cierro el navegador
+    #Then Cierro el navegador

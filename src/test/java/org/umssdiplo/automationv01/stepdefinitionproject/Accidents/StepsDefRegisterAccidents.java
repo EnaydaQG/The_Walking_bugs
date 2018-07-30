@@ -48,7 +48,7 @@ public class StepsDefRegisterAccidents {
         WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[@id=\"mat-dialog-0\"]/app-accident-edit-component/div/form/div[9]/button[1]/span")));
     }
-    @Then("^Cierro el navegador$")
+    /*@Then("^Cierro el navegador$")
     public void cierroElNavegador() {
-        driver.close();
-}}
+        driver.close();}*/
+}

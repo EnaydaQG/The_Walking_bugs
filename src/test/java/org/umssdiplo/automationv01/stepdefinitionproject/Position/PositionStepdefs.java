@@ -39,7 +39,7 @@ public class PositionStepdefs {
         create.click();
     }
 
-    @And("^LLeno los datos con$")
+    @And("^LLeno los datos para posición con$")
     public void llenoLosDatosCon(DataTable datos) {
         manageDriver.setExplicitTimeWait(60);
         manageDriver.setImplicitTimeWait(60);
@@ -81,7 +81,7 @@ public class PositionStepdefs {
         CommonEvents.setInputField(purposeElement, purpose);
     }
 
-    @Then("^Hago click en guardar cambios$")
+    @Then("^Hago click en guardar cambios para posición$")
     public void hagoClickEnGuardarCambios() {
         manageDriver.setImplicitTimeWait(60);
         WebElement create = ((FirefoxDriver) driver).findElementById("btn-save");
@@ -126,8 +126,8 @@ public class PositionStepdefs {
     }
 
 
-    @Then("^Cierro el navegador$")
+    /*@Then("^Cierro el navegador$")
     public void cierroElNavegador() {
         driver.close();
-    }
+    }*/
 }

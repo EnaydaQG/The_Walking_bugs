@@ -72,7 +72,7 @@ public class DeleteEquipAssignedStepdef {
     @And("^Verifico que no se encuentre el equipo  \"([^\"]*)\"$")
     public void verificoQueNoSeEncuentreElEquipo(String equipo) {
         String equipoActual = getLastEquipo().getText();
-        Assert.assertEquals(equipo,equipoActual,"El equipo ha sido eliminado");
+        Assert.assertNotEquals(equipo,equipoActual);
     }
 
     private WebElement getButtonEquip(){
