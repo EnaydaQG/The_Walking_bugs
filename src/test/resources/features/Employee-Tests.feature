@@ -27,4 +27,3 @@ Feature: Actualizar Empleado
     And Verifico que los datos del empleado no sean
       |name     |lastName     |ci    |birthDate |phone |civilState|noDep|gender   |experience     |position  |supervisor    |project            |initDate  |finishDate|salary|description    |
       |Test Name2|Test LastName2|1000001|1992-10-02|478922|Soltero/a  |2    |Femenino|Con experiencia|Maestro soldador|Pablo Morado|Edificio Palmas|2010-10-09|2030-10-09|6000  |Contrato basico 2|
-    Then Cierro el navegador

@@ -71,6 +71,7 @@ public class TypeEquipmentList {
         delete.click();
     }
 
+
    @Then("^Cierro el navegador$")
     public void cierroElNavegador() {
         driver.close();

@@ -27,6 +27,7 @@ public class TypeEquipment {
 
     @And("^Verifico que los datos del tipo de Equipo sean$")
     public void verificoSiEsElTipoDeEquipoCreado(DataTable datos) {
+
         manageDriver.setImplicitTimeWait(60);
         List<List<String>> values = datos.raw();
         String expectedName = values.get(1).get(0);
