@@ -1,7 +1,8 @@
 # This file contains the tests cases to Create an Employee, Update an Employee and Delete an Employee
 Feature: Actualizar Empleado
 
-  @114 @115 @116
+  #Jira tickets
+  @TWB-7 @TWB-10 @TWB-11
   Scenario: Actualizar Empleado correctamente
     Given Accedo a la lista de empleados "http://localhost:4200/employees-list"
     Then Selecciono Registrar Empleado
